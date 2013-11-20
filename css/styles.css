@@ -89,6 +89,8 @@ nav a:visited {
 	width: 128px;
 	
 	/*CSS 3*/
+	-moz-transition: margin-top .25s;
+	-webkit-transition: margin-top .25s;
 	transition: margin-top .25s;
 }
  
@@ -102,9 +104,9 @@ nav a:active {
 /*==============================
 	Navigation: Page Indicators
 ==============================*/
-.about, 
-.students,
-.contact {
+.about li:nth-child(1), 
+.students li:nth-child(2), 
+.contact li:nth-child(3) {
 	background: rgba(255,255,255,.15);
 }
 
@@ -126,10 +128,10 @@ nav a:active {
 	Students Page
 ==============================*/
 .members li {
-
+	float: left;
 	list-style: none;
 	margin: 20px 0 0 20px;
-
+	position: relative;
 	width: 440px;
 }
 
@@ -139,10 +141,10 @@ nav a:active {
 	color: #fff;
 	left: -20px;
 	padding: 10px;
-
+	position: absolute;
 	
 	/* CSS 3*/
-
+	
 }
 
 /* Ribbon Triangle */
@@ -155,7 +157,7 @@ nav a:active {
 	border-color: #333 transparent transparent transparent;
 	bottom: -39px;
 	border-width: 20px;
-
+	z-index: -1;
 }
 
 .members img {
@@ -181,5 +183,5 @@ nav a:active {
 }
 
 label {
-
+	display: block;
 }
